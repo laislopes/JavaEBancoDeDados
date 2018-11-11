@@ -19,12 +19,12 @@ import java.util.logging.Logger;
  */
 public class ConnectionFactory {
     
-    private final String DRIVER = "com.mysql.jdbc.Driver";
-    private final String URL = "jdbc:mysql://localhost:3306/bytebank";
-    private final String USER = "root";
-    private final String PASS = "";
+    private static final String DRIVER = "com.mysql.jdbc.Driver";
+    private static final String URL = "jdbc:mysql://localhost:3306/bytebank";
+    private static final String USER = "root";
+    private static final String PASS = "";
     
-    public Connection getConnection(){
+    public static Connection getConnection(){
         
         try {
             Class.forName(DRIVER);
