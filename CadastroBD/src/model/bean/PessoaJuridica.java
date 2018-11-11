@@ -8,8 +8,6 @@ import java.util.ArrayList;
 
 public class PessoaJuridica extends Pessoa {
     
-    private static int id = 0;
-    private ArrayList<Integer> idClientePJ;
     private String CNPJ;
     private String razaoSocial;
     private String nomeFantasia;
@@ -19,8 +17,6 @@ public class PessoaJuridica extends Pessoa {
     public PessoaJuridica(String CNPJ, ArrayList<Integer> idClientePJ ){
         
         this.CNPJ = CNPJ;
-        id++;
-        this.idClientePJ = idClientePJ;
     }
 
     public String getCNPJ() {
@@ -38,17 +34,6 @@ public class PessoaJuridica extends Pessoa {
     public void setRazaoSocial(String razaoSocial) {
         this.razaoSocial = razaoSocial;
     }
-    
-    public void setIDCliente(){
-     
-     idClientePJ.add(id);
-     
-   }
-     public int getIDCliente(int linha){
-     
-     
-     return idClientePJ.get(linha);
-   }
          
     public String getNomeFantasia() {
         return this.nomeFantasia;

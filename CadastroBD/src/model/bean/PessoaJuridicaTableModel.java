@@ -8,7 +8,7 @@ import javax.swing.table.AbstractTableModel;
 public class PessoaJuridicaTableModel extends AbstractTableModel{
     
     List<PessoaJuridica> dados = new ArrayList <>();
-    String[] colunas = {"ID","Razão Social", "CNPJ", "Inscrição Estadual", "Telefone", "E-mail", "Data do Cadastro"};
+    String[] colunas = {"CNPJ","Razão Social","Inscrição Estadual", "Telefone", "E-mail", "Data do Cadastro"};
 
     @Override
     public String getColumnName(int column) {
@@ -32,18 +32,16 @@ public class PessoaJuridicaTableModel extends AbstractTableModel{
         
         switch(coluna){
             case 0:
-                return dados.get(linha).getIDCliente(linha);
+                return dados.get(linha).getCNPJ();
             case 1:
                 return dados.get(linha).getRazaoSocial();
             case 2:
-                return dados.get(linha).getCNPJ();
-            case 3:
                 return dados.get(linha).getInscricaoEstadual();
-            case 4:
+            case 3:
                 return dados.get(linha).getTelefone();
-            case 5:
+            case 4:
                 return dados.get(linha).getEmail();
-            case 6:
+            case 5:
                 return dados.get(linha).getDataDoCadastro();
              
                 

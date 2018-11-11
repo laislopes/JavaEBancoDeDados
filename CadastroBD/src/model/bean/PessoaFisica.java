@@ -6,8 +6,6 @@ import java.util.ArrayList;
 
 public class PessoaFisica extends Pessoa {
     
-    private static int id = 0;
-    private ArrayList<Integer> idClientePF;
     private String nome;
     private String CPF;
     private String sexo;
@@ -15,11 +13,10 @@ public class PessoaFisica extends Pessoa {
     
     
     
-    public PessoaFisica(String CPF,ArrayList<Integer> idClientePF ){
+    public PessoaFisica(String CPF){
         
         this.CPF = CPF;
-        id++;
-        this.idClientePF = idClientePF;
+        
     }
 
     public String getNome() {
@@ -38,13 +35,6 @@ public class PessoaFisica extends Pessoa {
         this.CPF = CPF;
     }
    
-    public void setIDCliente(){
-        idClientePF.add(id);
-   }
-   public int getIDCliente(int linha){
-       return idClientePF.get(linha);
-   }
-
     public String getSexo() {
         return this.sexo;
     }
