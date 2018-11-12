@@ -1,0 +1,33 @@
+create table Clientes(
+	ClienteID int NOT NULL AUTO_INCREMENT,
+	Endereco varchar(100) not null,
+	Cidade varchar(100) not null,
+	Estado varchar(100) not null,
+	Pais varchar(100) not null,
+	Primary key(
+		ClienteID
+))
+
+create table PessoasFisicas(
+	ClienteID int not null,
+	Nome varchar(100) not null,
+	CPF varchar(100) not null
+	Primary key(
+	  ClienteID
+))
+
+alter table PessoasFisicas add foreign key (ClienteID)
+references Clientes(ClienteID)
+
+create table PessoasJuridicas(
+	ClienteID int not null,
+	RazaoSocial varchar(100) not null,
+	CNPJ varchar(100) not null
+	Primary key(
+	  ClienteID
+))
+
+alter table PessoasJuridicas add foreign key (ClienteID)
+references Clientes(ClienteID)
+
+INSERT INTO pessoasfisicas select 0,'Lais','345345345','787977897897',1

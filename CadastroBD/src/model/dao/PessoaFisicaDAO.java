@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.bean.PessoaFisica;
 
 /**
  *
@@ -18,13 +19,17 @@ import java.util.logging.Logger;
  */
 public class PessoaFisicaDAO {
     
-    public void create(){
+    public void create(PessoaFisica pf){
         
         Connection con = ConnectionFactory.getConnection();
         PreparedStatement stmt = null;
         
         try {
-            stmt = con.prepareStatement("");
+            stmt = con.prepareStatement("INSERT INTO pessoasfisicas select 0,?,?,?,?");
+            stmt.setString(2, pf.getNome());
+            stmt.setString(3, pf.getCPF());
+            stmt.setString(4, pf.getCelular());
+            stmt.setInt(0, 0);
         } catch (SQLException ex) {
             Logger.getLogger(PessoaFisicaDAO.class.getName()).log(Level.SEVERE, null, ex);
         }

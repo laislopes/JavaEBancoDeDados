@@ -3,20 +3,22 @@ package model.bean;
 import java.util.ArrayList;
 
 
-
+public enum Sexo{
+    Masculino(0),
+    Feminino(1);  
+}
 public class PessoaFisica extends Pessoa {
     
     private String nome;
     private String CPF;
-    private String sexo;
+    private enum sexo;
     private String celular;
     
     
     
-    public PessoaFisica(String CPF){
+    public PessoaFisica(String CPF, ArrayList<Integer> idClientePF){
         
         this.CPF = CPF;
-        
     }
 
     public String getNome() {
@@ -34,7 +36,7 @@ public class PessoaFisica extends Pessoa {
     public void setCPF(String CPF) {
         this.CPF = CPF;
     }
-   
+    
     public String getSexo() {
         return this.sexo;
     }

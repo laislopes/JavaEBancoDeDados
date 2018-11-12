@@ -8,7 +8,7 @@ import javax.swing.table.AbstractTableModel;
 public class PessoaFisicaTableModel extends AbstractTableModel{
     
     List<PessoaFisica> dados = new ArrayList <>();
-    String[] colunas = {"CPF","Nome","Telefone","Celular","E-mail","Data do Cadastro"};
+    String[] colunas = {"Nome","CPF","Celular","Sexo"};
 
     @Override
     public String getColumnName(int column) {
