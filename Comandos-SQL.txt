@@ -1,17 +1,25 @@
 create table Clientes(
 	ClienteID int NOT NULL AUTO_INCREMENT,
 	Endereco varchar(100) not null,
+	Numero int not null,
 	Cidade varchar(100) not null,
+	Bairro varchar(100) not null,
 	Estado varchar(100) not null,
-	Pais varchar(100) not null,
+	CEP varchar(100) not null,
+	Telefone varchar(100) not null,
+	Email varchar(100) not null,
+	DataDoCadastro DATETIME not null,
 	Primary key(
 		ClienteID
 ))
 
+
 create table PessoasFisicas(
 	ClienteID int not null,
 	Nome varchar(100) not null,
-	CPF varchar(100) not null
+	CPF varchar(100) not null,
+	Celular varchar(100) not null,
+	Sexo BINARY not null,
 	Primary key(
 	  ClienteID
 ))
@@ -22,7 +30,10 @@ references Clientes(ClienteID)
 create table PessoasJuridicas(
 	ClienteID int not null,
 	RazaoSocial varchar(100) not null,
-	CNPJ varchar(100) not null
+	CNPJ varchar(100) not null,
+	NomeFantasia varchar(100) not null,
+	InscricaoEstadual varchar(100) not null,
+	Site varchar(100) not null,
 	Primary key(
 	  ClienteID
 ))

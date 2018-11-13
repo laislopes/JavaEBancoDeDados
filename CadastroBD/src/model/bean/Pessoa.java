@@ -6,7 +6,7 @@ package model.bean;
     
      
      private String endereco;
-     private String numero;
+     private int numero;
      private String cidade;
      private String uf;
      private String bairro;
@@ -24,11 +24,11 @@ package model.bean;
         this.endereco = endereco;
     }
 
-    public String getNumero() {
+    public int getNumero() {
         return this.numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 
