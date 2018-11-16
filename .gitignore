@@ -37,13 +37,13 @@ target/
 .project
 
 # NetBeans specific
-CadastroBD/nbproject/private/
-CadastroBD/build/
-CadastroBD/nbbuild/
-CadastroBD/dist/
-CadastroBD/nbdist/
-CadastroBD/nbactions.xml
-CadastroBD/nb-configuration.xml
+JavaJPA/nbproject/private/
+JavaJPA/build/
+JavaJPA/nbbuild/
+JavaJPA/dist/
+JavaJPA/nbdist/
+JavaJPA/nbactions.xml
+JavaJPA/nb-configuration.xml
 
 
 # OS
