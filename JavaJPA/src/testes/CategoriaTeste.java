@@ -9,6 +9,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import model.bean.Categoria;
+import Connection.ConnectionFactory;
 
 /**
  *
@@ -19,16 +20,16 @@ public class CategoriaTeste {
     public static void main(String[] args) {
         
         Categoria c = new Categoria();
-        c.setDescricao("Bebidas");
+        c.setDescricao("Comidas");
         
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("meuPU");
-        EntityManager em = emf.createEntityManager();
+        
+        EntityManager em = new ConnectionFactory().getConnection();
         
         em.getTransaction().begin();
         em.persist(c);
         em.getTransaction().commit();
         
         em.close();
-        emf.close();
+        
     }
 }
